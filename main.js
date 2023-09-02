@@ -40,7 +40,7 @@ async function generateImages(input) {
       {
         method: "POST",
         headers: {
-          
+          "Content-Type": "application/json",
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({ inputs: prompt }),
@@ -78,5 +78,3 @@ function downloadImage(imgUrl, imageNumber) {
   link.download = `image-${imageNumber + 1}.jpg`;
   link.click();
 }
-
-
